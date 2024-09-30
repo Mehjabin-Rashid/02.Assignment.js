@@ -39,12 +39,17 @@ console.log(lowercaseFirstLetter("Hello World"));
 
 //-------(07)-------//
 function countVowels(str) {
-   if (str.length === 0);
-   return str;
-   str.charAt(0).countVowels() + str.slice(1);
+  let vowels = "aeiouAEIOU";
+  let count = 0;
+  for (let char of str) {
+    if (vowels.includes(char)) {
+      count++;
+    }
+  }
+  return count;
 }
 
-console.log(countVowels("aeiouAEIOU"));
+console.log(countVowels("Mehjabin"));
 
 //-------(08)-------//
 function findAverage(arr) {
